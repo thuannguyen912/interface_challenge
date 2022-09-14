@@ -17,11 +17,13 @@ public class Monster implements ISavable {
 
     @Override
     public List<Item> getItem() {
-        return null;
+        return this.itemList;
     }
 
     @Override
     public void populateItem(List<Item> itemList) {
-
+        for (Item item : itemList) {
+            System.out.println(item.toString());
+        }
     }
 }

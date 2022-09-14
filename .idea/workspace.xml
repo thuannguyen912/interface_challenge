@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea866d60-281a-4016-8b60-971fa99011c4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/challenge/challenge.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/challenge/src/ISaveable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/challenge/src/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/challenge/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/challenge/src/Monster.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/challenge/src/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface_challenge.iml" afterDir="false" />
+    <list default="true" id="ea866d60-281a-4016-8b60-971fa99011c4" name="Changes" comment="- added Player, Item, Monster class&#10;- added ISavable interface">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenge/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge/src/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenge/src/Monster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenge/src/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +58,21 @@
       <option name="presentableId" value="Default" />
       <updated>1663167834907</updated>
     </task>
+    <task id="LOCAL-00001" summary="- added Player, Item, Monster class&#10;- added ISavable interface">
+      <created>1663169778610</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663169778610</updated>
+    </task>
+    <task id="LOCAL-00002" summary="- added Player, Item, Monster class&#10;- added ISavable interface">
+      <created>1663169925533</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1663169925533</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -79,5 +85,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="- added Player, Item, Monster class&#10;- added ISavable interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="- added Player, Item, Monster class&#10;- added ISavable interface" />
   </component>
 </project>

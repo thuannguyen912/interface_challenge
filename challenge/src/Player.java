@@ -15,17 +15,37 @@ public class Player implements ISavable {
         return life;
     }
 
-    public void pickUp(Item item) {
+    public void pickUp(String weaponName) {
+        Item currentItem = existItem(weaponName);
+        if (currentItem != null) {
+            this.itemList.add(currentItem);
+        } else {
+            System.out.println("Already pickup this item.");
+        }
+    }
+
+    public void attack(Monster monster) {
 
     }
 
-    @Override
-    public List<Item> getItem() {
+    private Item existItem(String weaponName) {
+        for (Item checkedItem : this.itemList) {
+            if (checkedItem.getWeaponType().equals(weaponName)) {
+                return checkedItem;
+            }
+        }
         return null;
     }
 
     @Override
-    public void populateItem(List<Item> itemList) {
+    public List<Item> getItem() {
+        return this.itemList;
+    }
 
+    @Override
+    public void populateItem(List<Item> itemList) {
+        for (Item item : itemList) {
+            System.out.println(item.toString());
+        }
     }
 }
