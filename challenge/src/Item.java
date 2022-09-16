@@ -1,8 +1,13 @@
 public class Item {
 
-    private String weaponType, weaponDmg;
+    private String weaponType;
 
-    public Item(String weaponType, String weaponDmg) {
+    private int weaponDmg;
+
+    public Item() {
+    }
+
+    public Item(String weaponType, int weaponDmg) {
         this.weaponType = weaponType;
         this.weaponDmg = weaponDmg;
     }
@@ -11,11 +16,11 @@ public class Item {
         return weaponType;
     }
 
-    public String getWeaponDmg() {
+    public int getWeaponDmg() {
         return weaponDmg;
     }
 
     public String toString() {
-        return this.weaponType + " has basic stats: " + this.weaponDmg;
+        return this.weaponType + " has basic stat: " + this.weaponDmg;
     }
 }

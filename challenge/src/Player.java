@@ -12,29 +12,42 @@ public class Player implements ISavable {
     }
 
     public int getLife() {
-        return life;
+        return this.life;
     }
 
-    public void pickUp(String weaponName) {
-        Item currentItem = existItem(weaponName);
-        if (currentItem != null) {
-            this.itemList.add(currentItem);
+    public void pickUp(Item item) {
+        if (this.itemList.size() == 0) {
+            this.itemList.add(item);
+            System.out.println(item.getWeaponType() + " is added to list.");
         } else {
-            System.out.println("Already pickup this item.");
-        }
-    }
-
-    public void attack(Monster monster) {
-
-    }
-
-    private Item existItem(String weaponName) {
-        for (Item checkedItem : this.itemList) {
-            if (checkedItem.getWeaponType().equals(weaponName)) {
-                return checkedItem;
+            boolean hasExist = existItem(item);
+            if (hasExist) {
+                System.out.println("Already picked up item.");
+            } else {
+                this.itemList.add(item);
+                System.out.println(item.getWeaponType() + " is added to list.");
             }
         }
-        return null;
+    }
+
+    public Item selectBestWeapon(List<Item> itemList) {
+        Item bestWeapon = new Item();
+        for (int i = 0; i < itemList.size(); i++) {
+            Item currentWeapon = itemList.get(i);
+            if (currentWeapon.getWeaponDmg() > bestWeapon.getWeaponDmg()) {
+                bestWeapon = currentWeapon;
+            }
+        }
+        return bestWeapon;
+    }
+
+    private boolean existItem(Item item) {
+        for (Item checkedItem : this.itemList) {
+            if (checkedItem.equals(item)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
