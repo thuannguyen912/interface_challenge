@@ -6,6 +6,8 @@ public interface ISavable {
 
     Item selectBestWeapon(List<Item> itemList);
 
+    Item selectBestWeapon();
+
     List<Item> getItem();
 
     void populateItem(List<Item> itemList);

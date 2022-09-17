@@ -4,7 +4,6 @@
     <list default="true" id="ea866d60-281a-4016-8b60-971fa99011c4" name="Changes" comment="- added methods in Player class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challenge/src/ISavable.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenge/src/ISavable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenge/src/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenge/src/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challenge/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenge/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challenge/src/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenge/src/Monster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challenge/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenge/src/Player.java" afterDir="false" />
