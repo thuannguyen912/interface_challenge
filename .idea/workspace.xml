@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea866d60-281a-4016-8b60-971fa99011c4" name="Changes" comment="- added methods in Player class">
+    <list default="true" id="ea866d60-281a-4016-8b60-971fa99011c4" name="Changes" comment="- refine method pickUp, selectBestWeapon in Player and Monster class.&#10;- added method attack, defend in Main class.&#10;- fix type weaponDmg in Item class.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenge/src/ISavable.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenge/src/ISavable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge/src/ISavable.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenge/src/ICharacterTemplate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challenge/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenge/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challenge/src/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenge/src/Monster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challenge/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenge/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/challenge/ISavable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/challenge/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/challenge/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/challenge/Monster.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/challenge/Monster.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/challenge/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/challenge/Player.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -79,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663174475338</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="- refine method pickUp, selectBestWeapon in Player and Monster class.&#10;- added method attack, defend in Main class.&#10;- fix type weaponDmg in Item class.">
+      <created>1666595038927</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666595038927</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -96,6 +107,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- added Player, Item, Monster class&#10;- added ISavable interface" />
     <MESSAGE value="- added methods in Player class" />
-    <option name="LAST_COMMIT_MESSAGE" value="- added methods in Player class" />
+    <MESSAGE value="- refine method pickUp, selectBestWeapon in Player and Monster class.&#10;- added method attack, defend in Main class.&#10;- fix type weaponDmg in Item class." />
+    <option name="LAST_COMMIT_MESSAGE" value="- refine method pickUp, selectBestWeapon in Player and Monster class.&#10;- added method attack, defend in Main class.&#10;- fix type weaponDmg in Item class." />
   </component>
 </project>

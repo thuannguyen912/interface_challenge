@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // monster extends player
-public class Monster implements ISavable {
+public class Monster implements ICharacterTemplate {
 
     private int life;
 
@@ -71,6 +71,23 @@ public class Monster implements ISavable {
             }
         }
         return false;
+    }
+
+    // Save current state of player (life)
+    @Override
+    public List<String> write() {
+        List<String> values = new ArrayList<>();
+        values.add(0, String.valueOf(this.life));
+        values.add(1, this.itemList.toString());
+        return values;
+    }
+
+    // Read the state
+    @Override
+    public void read(List<String> savedValues) {
+        if (savedValues != null && savedValues.size() > 0) {
+            this.life = Integer.parseInt(savedValues.get(0));
+        }
     }
 
     @Override

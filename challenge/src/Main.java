@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -13,20 +15,26 @@ public class Main {
         Item axe = new Item("Axe", 60);
         Item oneHandSword = new Item("One-handed sword", 30);
         Item twoHandSword = new Item("Two-handed sword", 65);
-        Item mace = new Item("Mace", 40);
+        Item mace = new Item("Mace", 55);
 
         player1.pickUp(axe);
         player1.pickUp(axe);
-        player1.pickUp(twoHandSword);
+        player1.pickUp(oneHandSword);
+
+        Item bestWeapon = player1.selectBestWeapon();
+        System.out.println("Player selected " + bestWeapon.getWeaponType());
 
         monster1.pickUp(mace);
 
         player1.populateItem(player1.getItem());
 
         player1.attack(monster1);
+
+        List<String> monsterState = monster1.write();
+
+        for (String item: monsterState) {
+            System.out.println(item);
+        }
     }
-
-
-
 
 }

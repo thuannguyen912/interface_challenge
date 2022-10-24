@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Player implements ISavable {
+public class Player implements ICharacterTemplate  {
 
     private int life;
 
@@ -24,6 +24,9 @@ public class Player implements ISavable {
         this.life = life;
     }
 
+    // First check if player is alive, then check weapon list size.
+    // If null, pickup the first weapon.
+    // If not null, check if the weapon already picked up.
     @Override
     public void pickUp(Item item) {
         if (isAlive()) {
@@ -44,6 +47,7 @@ public class Player implements ISavable {
         }
     }
 
+    // Lookup in the weapon list to select most dmg weapon, using weapon list obj as parameter
     @Override
     public Item selectBestWeapon(List<Item> itemList) {
         if (isAlive()) {
@@ -61,6 +65,7 @@ public class Player implements ISavable {
         return null;
     }
 
+    // Lookup in the weapon list to select most dmg weapon without parameter
     @Override
     public Item selectBestWeapon() {
         Item bestWeapon = new Item();
@@ -73,6 +78,9 @@ public class Player implements ISavable {
         return bestWeapon;
     }
 
+    // First check if player is alive
+    // If player's weapon dmg < monster's weapon dmg, cannot attack
+    // Else minus monster health by the difference between two weapons dmg
     public void attack(Monster monster) {
         if (isAlive()) {
             int playerWeaponDmg = selectBestWeapon(this.itemList).getWeaponDmg();
@@ -90,10 +98,12 @@ public class Player implements ISavable {
         }
     }
 
+    // validate if player is alive
     private boolean isAlive() {
         return this.getLife() >= 0;
     }
 
+    // validate if item is already picked up
     private boolean existItem(Item item) {
         for (Item checkedItem : this.itemList) {
             if (checkedItem.equals(item)) {
@@ -103,11 +113,29 @@ public class Player implements ISavable {
         return false;
     }
 
+    // Save current state of player's life
+    // Because limitation of List<String> is only stored String
+    @Override
+    public List<String> write() {
+        List<String> values = new ArrayList<>();
+        values.add(0, String.valueOf(this.life));
+        return values;
+    }
+
+    // Read the state
+    @Override
+    public void read(List<String> savedValues) {
+        if (savedValues != null && savedValues.size() > 0) {
+            this.life = Integer.parseInt(savedValues.get(0));
+        }
+    }
+
     @Override
     public List<Item> getItem() {
         return this.itemList;
     }
 
+    // show all items picked up
     @Override
     public void populateItem(List<Item> itemList) {
         for (Item item : itemList) {
